@@ -66,6 +66,12 @@ const passwordSlice = createSlice({
         openEditPasswordModal(state: AppState) {
             state.isEditPasswordVisible = true;
         },
+        closeGeneratePasswordModal(state: AppState) {
+            state.isGeneratePasswordVisible = false;
+        },
+        openGeneratePasswordModal(state: AppState) {
+            state.isGeneratePasswordVisible = true;
+        },
         openViewPasswordModal(state: AppState) {
             state.isViewPasswordVisible = true;
         },

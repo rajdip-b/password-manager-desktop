@@ -12,3 +12,12 @@ We all face the problem of remembering our passwords. With the increase in cyber
 -   ElectronJS
 -   TailwindCSS
 -   Typescript
+
+## Steps to run locally
+
+```
+git clone https://github.com/rajdip-b/password-manager-desktop
+cd password-manager-desktop
+npm i
+npm start
+```

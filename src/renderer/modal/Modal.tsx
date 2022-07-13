@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { appActions, StoreStateType } from 'store/store';
 import AddPasswordModal from './AddPasswordModal';
 import EditPasswordModal from './EditPasswordModal';
+import GeneratePasswordModal from './GeneratePasswordModal';
 import ViewPasswordModal from './ViewPasswordModal';
 
 const Modal: FC = () => {
@@ -40,11 +41,20 @@ const Modal: FC = () => {
         setClasses('animate-modalHoverOut');
     }, [dispatch, clearFocussedPasswordId]);
 
+    const closeGeneratePasswordModal = useCallback(() => {
+        setTimeout(() => {
+            dispatch(appActions.closeGeneratePasswordModal());
+            setClasses('animate-modalHoverIn');
+        }, 300);
+        setClasses('animate-modalHoverOut');
+    }, [dispatch]);
+
     return (
         <>
             {(appCtx.isAddPasswordVisible ||
                 appCtx.isViewPasswordVisible ||
-                appCtx.isEditPasswordVisible) && (
+                appCtx.isEditPasswordVisible ||
+                appCtx.isGeneratePasswordVisible) && (
                 <div
                     className={`absolute bg-gray-800/60 h-screen w-screen transition-all ease-out duration-300 ${classes}`}
                 >
@@ -56,6 +66,11 @@ const Modal: FC = () => {
                     )}
                     {appCtx.isViewPasswordVisible && (
                         <ViewPasswordModal onClose={closeViewPasswordModal} />
+                    )}
+                    {appCtx.isGeneratePasswordVisible && (
+                        <GeneratePasswordModal
+                            onClose={closeGeneratePasswordModal}
+                        />
                     )}
                 </div>
             )}

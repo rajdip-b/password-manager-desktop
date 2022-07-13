@@ -39,7 +39,12 @@ const Dashboard: FC = () => {
                     >
                         Add a new password
                     </BigRoundedButton>
-                    <BigRoundedButton className="from-[#f9ed32] to-[#fbb040] shadow-[#fbb04056] text-slate-50">
+                    <BigRoundedButton
+                        onClick={() =>
+                            dispatch(appActions.openGeneratePasswordModal())
+                        }
+                        className="from-[#f9ed32] to-[#fbb040] shadow-[#fbb04056] text-slate-50"
+                    >
                         Generate a password
                     </BigRoundedButton>
                     <AveragePasswordQuality />
