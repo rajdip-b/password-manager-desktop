@@ -4,13 +4,13 @@ import { StoreStateType } from 'store/store';
 import BigRoundedButton from './BigRoundedButton';
 
 const getPasswordStrength = (password: string) => {
-    const weak = /[a-zA-Z]{5,}/;
-    const moderate = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z\d]{5,}/;
-    const strong = /(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-_Z!@#$%^&*]{8,}$/;
+    const weak = /[0-9a-zA-_Z!@#$%^&.*]{5,}/;
+    const moderate = /[0-9a-zA-_Z!@#$%^&.*]{8,}/;
+    const strong = /(?=.*\D)[0-9a-zA-_Z!@#$%^&.*]{8,}$/;
     const veryStrong =
-        /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-_Z!@#$%^&*]{8,}$/;
+        /^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])[0-9a-zA-_Z!@#$%^&.*]{8,}$/;
     const superStrong =
-        /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!_@#$%^&*.])[0-9a-zA-_Z!@#$%^&.*]{8,}$/;
+        /^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[!_@#$%^&*.])[0-9a-zA-_Z!@#$%^&.*]{8,}$/;
 
     if (superStrong.test(password)) return 6;
     if (veryStrong.test(password)) return 5;
