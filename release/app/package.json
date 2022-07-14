@@ -6,7 +6,7 @@
     "author": {
         "name": "Rajdip Bhattacharya",
         "email": "rajdipbhattacharya41@gmail.com",
-        "url": "https://github.com/rajdip-b/calculator-desktop"
+        "url": "https://github.com/rajdip-b/password-manager-desktop"
     },
     "main": "./dist/main/main.js",
     "scripts": {

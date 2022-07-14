@@ -254,7 +254,7 @@
         "publish": {
             "provider": "github",
             "owner": "Rajdip Bhattacharya",
-            "repo": "Calculator"
+            "repo": "password-manager-desktop"
         }
     },
     "collective": {

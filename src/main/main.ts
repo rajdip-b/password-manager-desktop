@@ -73,8 +73,9 @@ const createWindow = async () => {
         width: 1280,
         height: 768,
         icon: getAssetPath('icon.png'),
+        title: 'Password Manager',
         webPreferences: {
-            // devTools: false,
+            devTools: false,
             preload: app.isPackaged
                 ? path.join(__dirname, 'preload.js')
                 : path.join(__dirname, '../../.erb/dll/preload.js'),
