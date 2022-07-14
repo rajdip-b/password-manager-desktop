@@ -62,7 +62,7 @@ const PasswordCard: FC<{ className?: string; password: Password }> = (
                         src={getFavIconURL(props.password.domain)}
                     />
                 </div>
-                <div>
+                <div className="md:w-[50%] lg:w-[40%]">
                     <h2 className="text-lg text-left text-slate-200">
                         {getDecoratedDomainName(props.password.domain)}
                     </h2>
@@ -73,7 +73,7 @@ const PasswordCard: FC<{ className?: string; password: Password }> = (
                     </div>
                 </div>
                 <div className="text-slate-300 text-sm flex flex-col w-[30%] gap-2 grow lg:mx-5">
-                    <h1>Strength</h1>
+                    <h1 className="text-left">Strength</h1>
                     <div className="flex">
                         <div
                             className={`${getPasswordStrength(
