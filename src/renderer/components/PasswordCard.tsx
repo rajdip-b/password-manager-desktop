@@ -5,7 +5,9 @@ import { useDispatch } from 'react-redux';
 import { appActions } from 'store/store';
 
 const getFavIconURL = (domainName: string) => {
-    return `https://${domainName}/favicon.ico`;
+    // return `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${domainName}}&size=128`;
+    // return `http://www.google.com/s2/favicons?domain=www.google.com&size=128`;
+    return `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${domainName}&size=128`;
 };
 
 const getDecoratedDomainName = (domainName: string) => {
