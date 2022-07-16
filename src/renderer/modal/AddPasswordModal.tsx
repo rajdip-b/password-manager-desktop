@@ -50,6 +50,7 @@ const AddPasswordModal: FC<{ onClose: () => void }> = (props) => {
                 onChange={(e) => setEmail(e)}
             />
             <TextInput
+                type="password"
                 value={password}
                 placeholder="Password"
                 className="focus:border-violet-500 hover:shadow-gray-800/40 focus:shadow-violet-500/40"
